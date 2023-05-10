@@ -1,0 +1,1 @@
+﻿INSERT INTO Pediatric(Med_Code, Name, Description, Quantity, Remarks) VALUES(000, 'Paracetamol', 'Common Medication', 10, 'Take Twice a day');

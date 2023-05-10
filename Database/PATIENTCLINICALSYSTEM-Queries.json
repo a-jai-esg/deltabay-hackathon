@@ -1,0 +1,225 @@
+{
+    "metadata": {
+        "kernelspec": {
+            "name": "SQL",
+            "display_name": "SQL",
+            "language": "sql"
+        },
+        "language_info": {
+            "name": "sql",
+            "version": ""
+        }
+    },
+    "nbformat_minor": 2,
+    "nbformat": 4,
+    "cells": [
+        {
+            "cell_type": "code",
+            "source": [
+                "CREATE DATABASE PATIENTCLINICALSYSTEM;"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "b7d9db1d-6765-4b7e-b4ff-c76031be2ea1",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "error",
+                    "evalue": "Msg 1801, Level 16, State 3, Line 1\r\nDatabase 'PATIENTCLINICALSYSTEM' already exists. Choose a different database name.",
+                    "ename": "",
+                    "traceback": []
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.001"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 18
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "CREATE TABLE [dbo].[PATIENTFILE](\r\n",
+                "    [PATCODE] INTEGER NOT NULL PRIMARY KEY CHECK(LEN(PATCODE) = 5),\r\n",
+                "    [PATFNAME] TEXT NOT NULL,\r\n",
+                "    [PATLNAME] TEXT NOT NULL,\r\n",
+                "    [PATMNAME] TEXT NOT NULL,\r\n",
+                "    [PATAGE] INTEGER NOT NULL CHECK (LEN(PATAGE) = 2),\r\n",
+                "    [PATGENDER] TEXT NOT NULL,\r\n",
+                "    [PATBDATE] DATE NOT NULL,\r\n",
+                "    [PATADDR] TEXT NOT NULL,\r\n",
+                "    [PATTEL] INTEGER NOT NULL CHECK (LEN(PATTEL) = 11),\r\n",
+                "    [PATFATHNAME] TEXT NOT NULL,\r\n",
+                "    [PATMOTHNAME] TEXT NOT NULL,\r\n",
+                "    [PATHEIGHT] INTEGER NOT NULL CHECK (LEN(PATHEIGHT) = 3),\r\n",
+                "    [PATWEIGHT] INTEGER NOT NULL CHECK (LEN(PATWEIGHT) = 3),\r\n",
+                "    [PATSTATUS] TEXT NOT NULL,\r\n",
+                ");"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "cc7c155b-d955-47e5-a4c6-a098f8f0f40b",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "error",
+                    "evalue": "Msg 2714, Level 16, State 6, Line 1\r\nThere is already an object named 'PATIENTFILE' in the database.",
+                    "ename": "",
+                    "traceback": []
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.002"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 19
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "CREATE TABLE [dbo].[PATIENTFILE](\r\n",
+                "    [PATCODE] INTEGER NOT NULL PRIMARY KEY CHECK(LEN(PATCODE) = 5),\r\n",
+                "    [PATFNAME] TEXT NOT NULL,\r\n",
+                "    [PATLNAME] TEXT NOT NULL,\r\n",
+                "    [PATMNAME] TEXT NOT NULL,\r\n",
+                "    [PATAGE] INTEGER NOT NULL CHECK (LEN(PATAGE) = 2),\r\n",
+                "    [PATGENDER] TEXT NOT NULL,\r\n",
+                "    [PATBDATE] DATE NOT NULL,\r\n",
+                "    [PATADDR] TEXT NOT NULL,\r\n",
+                "    [PATTEL] INTEGER NOT NULL CHECK (LEN(PATTEL) = 11),\r\n",
+                "    [PATFATHNAME] TEXT NOT NULL,\r\n",
+                "    [PATMOTHNAME] TEXT NOT NULL,\r\n",
+                "    [PATHEIGHT] INTEGER NOT NULL CHECK (LEN(PATHEIGHT) = 3),\r\n",
+                "    [PATWEIGHT] INTEGER NOT NULL CHECK (LEN(PATWEIGHT) = 3),\r\n",
+                "    [PATSTATUS] TEXT NOT NULL,\r\n",
+                ");"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "7b592201-1471-46ec-92c9-21e66dbe00a6",
+                "language": "sql"
+            },
+            "outputs": [],
+            "execution_count": null
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "CREATE TABLE [dbo].[EMPLOYEEFILE](\r\n",
+                "    [EMPCODE] INTEGER NOT NULL PRIMARY KEY CHECK(LEN(EMPCODE) = 5),\r\n",
+                "    [EMPFNAME] TEXT NOT NULL,\r\n",
+                "    [EMPLNAME] TEXT NOT NULL,\r\n",
+                "    [EMPMNAME] TEXT NOT NULL,\r\n",
+                "    [EMPPOSITION] TEXT NULL,\r\n",
+                "    [EMPSTATUS] TEXT NOT NULL,\r\n",
+                ");"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "1c6a20e3-b27e-4b7c-9733-c150442d669f",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Commands completed successfully."
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.005"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 20
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "CREATE TABLE [dbo].[MEDICINEFILE](\r\n",
+                "    [MEDCODE] INTEGER NOT NULL PRIMARY KEY CHECK(LEN(MEDCODE) = 5),\r\n",
+                "    [MEDNAME] TEXT NOT NULL,\r\n",
+                "    [MEDDOSE] VARCHAR(10) NOT NULL,\r\n",
+                "    [MEDDESC] TEXT NOT NULL,\r\n",
+                "    [MEDSTATUS] TEXT NOT NULL,\r\n",
+                ");"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "73e8035b-8af8-4627-b404-d99969f09b15",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Commands completed successfully."
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.004"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 21
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "ALTER TABLE [dbo].[MEDICINEFILE]\r\n",
+                "    ALTER COLUMN [MEDSTATUS] TEXT NOT NULL;"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "e0239408-f623-4e40-96b5-644fb0376f51",
+                "language": "sql"
+            },
+            "outputs": [
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Commands completed successfully."
+                    },
+                    "metadata": {}
+                },
+                {
+                    "output_type": "display_data",
+                    "data": {
+                        "text/html": "Total execution time: 00:00:00.004"
+                    },
+                    "metadata": {}
+                }
+            ],
+            "execution_count": 22
+        },
+        {
+            "cell_type": "code",
+            "source": [
+                "CREATE TABLE [dbo].[PRESCRIPTIONHEADERFILE](\r\n",
+                "    [PRESHCODE] INTEGER NOT NULL PRIMARY KEY CHECK(LEN(MEDCODE) = 5),\r\n",
+                "    [PRESHCONSNO] TEXT NOT NULL,\r\n",
+                "    [PRESHPATCODE] VARCHAR(10) NOT NULL,\r\n",
+                "    [PRESHDATE] TEXT NOT NULL,\r\n",
+                "    [PRESHPREPBY] TEXT NULL,\r\n",
+                "    [PRESHSTATUS] TEXT NULL,\r\n",
+                ");"
+            ],
+            "metadata": {
+                "azdata_cell_guid": "a1de5624-ed99-4d56-91a8-76ef6485c392",
+                "language": "sql"
+            },
+            "outputs": [],
+            "execution_count": null
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+﻿INSERT INTO [dbo].[MEDICINEFILE](MEDCODE, MEDNAME, MEDDOSE, MEDDESC, MEDSTATUS)
+VALUES (10005, 'Chloropheneramine Maleate', 3.5, 'Decongestant', 'AV');

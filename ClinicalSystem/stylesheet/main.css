@@ -1,0 +1,73 @@
+﻿/*
+    Webpage Definition
+*/
+body {
+    background-color: antiquewhite;
+}
+
+/*
+    ASP.NET Definitions
+*/
+
+.textbox{
+    margin-right: 25px;
+}
+
+/*
+    Header Definitions
+*/
+.header{
+    font-family: 'Cormorant Garamond', serif;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.header table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header th {  
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+}
+
+/*
+    Form Definitions
+*/
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form_type_1 table{
+    font-family: 'Didact Gothic', sans-serif; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 100px;
+    padding-left: 100px; 
+}
+
+.form_type_1 td {
+    padding-right: 15px;
+    font-weight: 400;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.form_type_1 fieldset{
+    background-color: bisque;
+    border-radius: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form_type_1 legend{
+    padding: 5px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
