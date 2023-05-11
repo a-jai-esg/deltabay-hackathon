@@ -13,7 +13,9 @@ namespace ClinicalSystem
         
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            try { 
+            /*
+            try {
+
                 SqlConnection sqlConnection = new SqlConnection(WebConfigurationManager.ConnectionStrings["SomeeConn"].ConnectionString);
                 string sqlQuery = "SELECT EMPFNAME, EMPLNAME, EMPPOSITION, EMPUSERNAME, EMPPASSWORD FROM [dbo].EMPLOYEEFILE";
 
@@ -62,6 +64,7 @@ namespace ClinicalSystem
             {
                 Response.Write(ex.Message);
             }
+            */
         }
     }
 }
