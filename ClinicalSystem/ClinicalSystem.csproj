@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="billing.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="prescription.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="stylesheet\main.css" />
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="prescription.aspx.cs">
       <DependentUpon>prescription.aspx</DependentUpon>

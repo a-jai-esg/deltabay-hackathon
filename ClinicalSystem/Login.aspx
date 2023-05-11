@@ -1,21 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registration.aspx.cs" Inherits="ClinicalSystem.registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ClinicalSystem.Login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>User Registration - Patient Clinical System</title>
-    <meta charset="UTF-8"/>
+    <title>DeltaBay Login</title>
     <link rel="stylesheet" type="text/css" href="stylesheet/main.css"/> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
-    <style type="text/css">
+
+    <style>
         body {
             background-color: #E8EEEC;
         }
     </style>
 </head>
 <body>
-    <form runat="server" id="form1">
+    <form id="form1" runat="server">
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
             <div class="container">
               <a class="navbar-brand" href="#">Navbar</a>
@@ -26,7 +27,7 @@
               <div class=" collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto ">
                   <li class="nav-item">
-                    <asp:Button CssClass="" ID="SignIn" runat="server" Text="SIGN IN" />
+                    <asp:Button CssClass="" ID="SignIn" runat="server" Text="SIGN IN" OnClick="SignIn_Click" />
                   </li>
                   <li class="nav-item">
                     <asp:Button CssClass="" ID="SignUp" runat="server" Text="SIGN UP" />
@@ -47,23 +48,8 @@
         </nav>
 
         <div style="height: 24em;" class="container">
-            <div style="margin-top: 4em;" class="row justify-content-center">
-                <div class="col-6" style="background-color: #95B2A2; border-radius: 1em; padding: 2em;">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">First name</label>
-                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server"></asp:TextBox>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Last name</label>
-                        <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server"></asp:TextBox>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Username</label>
-                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server"></asp:TextBox>
-                    </div>
-
+            <div style="margin-top: 12em;" class="row justify-content-center">
+                <div class="col-6" style="background-color: #95B2A2; border-radius: 1em;">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Email address</label>
                         <asp:TextBox CssClass="form-control" ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox>
@@ -72,11 +58,6 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Password</label>
                         <asp:TextBox CssClass="form-control"  ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
-                        <asp:TextBox CssClass="form-control"  ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
 
                     <div class="mb-3 justify-content-right">

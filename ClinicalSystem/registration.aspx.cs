@@ -13,6 +13,7 @@ namespace ClinicalSystem
 
         }
 
+        /*
         private string build_user_credentials() {
 
             StringBuilder sb = new StringBuilder();
@@ -20,7 +21,9 @@ namespace ClinicalSystem
 
             return sb.ToString();
         }
+        */
 
+        /*
         private bool check_duplicate(string Login_Username, string Login_Password)
         {
             try {
@@ -82,5 +85,6 @@ namespace ClinicalSystem
                 RegistrationNoticeLabel.Text = "Please review entered credentials.";
             }
         }
+        */
     }
 }
