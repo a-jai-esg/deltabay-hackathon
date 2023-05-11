@@ -10,15 +10,15 @@ namespace ClinicalSystem
         {
 
         }
-        
-        protected void LoginButton_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         protected void SignIn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+
+        protected void SignUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("registration.aspx");
         }
     }
 }

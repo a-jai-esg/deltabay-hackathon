@@ -13,6 +13,16 @@ namespace ClinicalSystem
 
         }
 
+        protected void SignIn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void SignUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("registration.aspx");
+        }
+
         /*
         private string build_user_credentials() {
 

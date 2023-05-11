@@ -7,32 +7,11 @@
     <title>DeltaBay Login</title>
     <link rel="stylesheet" type="text/css" href="stylesheet/main.css"/> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
-
-    <style>
-        body {
-            background-color: #E8EEEC;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
-            <div class="container">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-    
-              <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto ">
-                  <li class="nav-item">
-                    <asp:Button CssClass="" ID="SignIn" runat="server" Text="SIGN IN" OnClick="SignIn_Click" />
-                  </li>
-                  <li class="nav-item">
-                    <asp:Button CssClass="" ID="SignUp" runat="server" Text="SIGN UP" />
-                  </li>
-                  <%--<li class="nav-item">
+        <%--<li class="nav-item">
                     <a class="nav-link mx-2" href="#">Search Mentors</a>
                   </li>
                   <li class="nav-item">
@@ -41,6 +20,22 @@
                   <li class="nav-item">
                     <a class="nav-link mx-2" href="#">Profile</a>
                   </li>--%>
+
+       <nav class="navbar navbar-expand-lg p-3">
+            <div class="container">
+              <a class="navbar-brand" href="#">DeltaBay</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item">
+                    <asp:Button CssClass="nav-link buttonStyle" ID="SignIn" runat="server" Text="SIGN IN" OnClick="SignIn_Click" />
+                  </li>
+                  <li class="nav-item">
+                    <asp:Button CssClass="nav-link buttonStyle" ID="SignUp" runat="server" Text="SIGN UP" OnClick="SignUp_Click"/>
+                  </li>
                 </ul>
               </div>
 
@@ -49,10 +44,10 @@
 
         <div style="height: 24em;" class="container">
             <div style="margin-top: 12em;" class="row justify-content-center">
-                <div class="col-6" style="background-color: #95B2A2; border-radius: 1em;">
+                <div class="col-6" style="background-color: #95B2A2; border-radius: 1em;padding: 2em;">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <asp:TextBox CssClass="form-control" ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox>
+                        <label for="exampleFormControlInput1" class="form-label">Username</label>
+                        <asp:TextBox CssClass="form-control" ID="txtEmail" runat="server"></asp:TextBox>
                     </div>
 
                     <div class="mb-3">
